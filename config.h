@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack:pixelsize=18:antialias=true:autohint=true";
-static char *font2[] = { "Shabnam:pixelsize=18:antialias=true:autohint=true" };
+static char *font = "Monaco:pixelsize=18:antialias=true:autohint=true";
+static char *font2[] = { "Shabnam:pixelsize=18" };
 static int borderpx = 10;
 
 /*
@@ -98,28 +98,28 @@ float alpha = 0.87;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#000000", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc0000",
-	"#4e9a06",
-	"#c4a000",
-	"#3465a4",
-	"#75507B",
-	"#06989a",
-	"#d3d7cf",
-	"#555753",
-	"#ef2929",
-	"#8ae234",
-	"#fce94f",
-	"#729fcf",
-	"#ad7fa8",
-	"#34e2e2",
-	"#eeeeec",
+	"#121314", /* black |  hard contrast: #1d2021 / soft contrast: #32302f */
+	"#bb1111", // red
+	"#4e9a06", // green
+	"#8eb800", // yellow
+	"#3465a4", // blue
+	"#b651ed", // magenta
+	"#00ffdd", // cyan
+	"#cfcfcf", // white
+	"#363b3a", // black1
+	"#ae4040", // red1
+	"#8ae234", // green1
+	"#99b53a", // yellow1
+	"#729fcf", // blue1
+	"#c36ff0", // magenta1
+	"#5bf8c0", // cyan1
+	"#cbcbcb", // white1
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#5dccec", /* 256 -> cursor */
+	"#eeaf51", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
-	"#000000", /* 258 -> bg */
-	"#FFFFFF", /* 259 -> fg */
+	"#050505", /* 258 -> bg */
+	"#ebdddd", /* 259 -> fg */
 };
 
 
@@ -127,6 +127,7 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
+
 unsigned int defaultfg = 259;
 unsigned int defaultbg = 258;
 static unsigned int defaultcs = 256;
